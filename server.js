@@ -15,9 +15,9 @@ mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('✅ Connected to MongoDB successfully!'))
+.then(() => console.log(' Connected to MongoDB successfully!'))
 .catch((error) => {
-  console.error(`❌ Error connecting to MongoDB: ${error.message}`);
+  console.error(` Error connecting to MongoDB: ${error.message}`);
   process.exit(1);
 });
 
@@ -95,5 +95,5 @@ app.delete('/api/categories/:id', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
+  console.log(` Server is running on port ${PORT}`);
 });
